@@ -161,6 +161,9 @@ if (is_product_category()){
 
 		<?php endif; ?>
 
+		</div><!-- col-md-10 -->
+			<!--<div class="col-md-2"><?php /* dynamic_sidebar( 'commerce-controls' ); */ ?> </div> -->
+
 		<?php
 		/**
 		 * woocommerce_after_main_content hook
@@ -169,7 +172,8 @@ if (is_product_category()){
 		 */
 		do_action('woocommerce_after_main_content');
 		?>
-	</div><!-- col-md-10 -->
+	
+
 
 </div><!-- row -->
 	</div><!-- container -->

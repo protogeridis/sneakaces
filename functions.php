@@ -43,6 +43,18 @@ foreach ( $includes as $i ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
+$args = array(
+	'name'          => __( 'Commerce Controls', 'sneakaces' ),
+	'id'            => 'commerce-controls',
+	'description'   => '',
+        'class'         => '',
+	'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</li>',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>' );
+
+register_sidebar( $args );
+
 // Add Masonry
 
 function mason_script() {
