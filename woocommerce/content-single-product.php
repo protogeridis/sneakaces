@@ -67,6 +67,19 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			do_action( 'woocommerce_single_product_summary' );
 			?>
 
+			<!-- Entry Social -->
+			<div class="entry-social">
+				<div class="fb-like" data-width="120" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+				<div class="tweet">
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</div>
+				<div class="plusone">
+					<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+					<g:plusone size="medium"></g:plusone>
+				</div>
+			</div><!-- entry social -->
+
 		</div><!-- .summary -->
 
 

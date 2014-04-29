@@ -94,9 +94,15 @@ global $tdurl;
 
 		<script src="<?php echo $tdurl; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/bxslider/jquery.bxslider.min.js"></script>
+		<script src="<?php echo $tdurl; ?>/vendor/responsivenav/responsive-nav.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/masonry/masonry.pkgd.min.js"></script>
 		<script>
-	 //bxslider
+	 
+
+	 jQuery(document).ready(function(){
+
+
+	 	//bxslider
 	  jQuery('.bxslider').bxSlider({
 	 	   mode: 'fade',
 	 	   pager: true,
@@ -105,6 +111,18 @@ global $tdurl;
 	 	   easing:'swing',
 	 	   pause:10000
 	      });
+
+	  var navigation = responsiveNav(".nav-collapse", {
+        customToggle: "#toggle"
+      });
+
+	 	FB.Event.subscribe('edge.create', function(targetUrl) {
+  //_gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+  console.log('FB Liked');
+});
+
+
+	 });
 
 	 </script>
 

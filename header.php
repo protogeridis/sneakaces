@@ -28,6 +28,7 @@ $tdurl = get_template_directory_uri();
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,greek' rel='stylesheet' type='text/css'>
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo $tdurl; ?>/vendor/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $tdurl; ?>/vendor/responsivenav/responsive-nav.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $tdurl; ?>/vendor/bxslider/jquery.bxslider.css" />
 	<link rel="shortcut icon" href="<?php echo $tdurl; ?>/favicon.ico" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -51,17 +52,24 @@ $tdurl = get_template_directory_uri();
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
+    <nav class="nav-collapse">
+    <?php wp_nav_menu( array( 'depth' => 1, 'menu' => 14)); ?> 
+    </nav>
+
+
 
 	<div class="wrapper-top">
 		<div id="header" class="header">
 			<div class="container">
+				
 				
 
 <?php woo_header_before(); ?>
 
 				<div class="row">
 					<div class="col-md-3">
-						<div class="header-branding">
+						<div class="header-branding relative">
+							<a id="toggle" class="closed mobile-nav"><i class="fa fa-bars fa-2x"></i></a>
 							<a href="<?php echo get_site_url(); ?>" class="logo header-logo"></a>
 						</div><!-- header branding -->
 					</div><!-- col md 3 -->
@@ -108,6 +116,8 @@ $tdurl = get_template_directory_uri();
 										}
 										?>
 									</nav><!-- Woocommerce navigation -->
+
+
 										
 									</div><!-- col-md-4 -->
 									
