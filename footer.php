@@ -101,6 +101,10 @@ global $tdurl;
 
 	 jQuery(document).ready(function(){
 
+	 	var navigation = responsiveNav(".nav-collapse", {
+        customToggle: "#toggle"
+      });
+
 
 	 	//bxslider
 	  jQuery('.bxslider').bxSlider({
@@ -111,17 +115,6 @@ global $tdurl;
 	 	   easing:'swing',
 	 	   pause:10000
 	      });
-
-	  var navigation = responsiveNav(".nav-collapse", {
-        customToggle: "#toggle"
-      });
-
-	 	FB.Event.subscribe('edge.create', function(targetUrl) {
-  //_gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
-  console.log('FB Liked');
-});
-
-
 	 });
 
 	 </script>

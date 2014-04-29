@@ -45,7 +45,24 @@ get_header('shop'); ?>
 			</div><!-- row -->
 		</div><!-- container -->
 		</div><!-- wrapper grey -->
-		<div class="container">
+		<div class="container container-product">
+
+			<div class="row">
+				<div class="col-md-2">
+
+		<?php
+
+						$args = array(
+							'menu' => 45,
+							'menu_class' => 'categories-menu categories-menu-vertical'
+							);
+
+						wp_nav_menu( $args );
+
+						?>
+		
+	</div><!-- col-md-2 -->
+	<div class="col-md-10">
 
 			
 			<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
@@ -71,6 +88,8 @@ get_header('shop'); ?>
 		 */
 		do_action('woocommerce_sidebar');
 	?>
+</div><!-- column -->
+</div><!-- row -->
 </div><!-- container -->
 
 
