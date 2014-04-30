@@ -34,20 +34,12 @@ global $tdurl;
 						
 
 
-						</div>
+						</div><!-- slide caption -->
 
 						<div class="slide-annotations">
 								<div class="annotation">
-				
-										<?php 
-							
-							$_pfid = 29;
-							$_pf = new WC_Product_Factory();  
-							$_product = $_pf->get_product($_pfid);
-							/* echo '<a href="'.site_url().'?p='.$_pfid.'">'.$_product->get_image().'</a>'; */
-							 echo '<a href="'.site_url().'?p='.$_pfid.'" style="top:100px;left:430px">+</a>'; 
-							?>
 
+									<a href="shop/baseball-tees/felix/" style="top:210px;left:480px">+</a>
 						
 									<div class="annotation-box">
 										
@@ -64,6 +56,17 @@ global $tdurl;
 							<p>Valid until September 31th.</p>
 							<a href="#">View Product</a>
 						</div><!-- caption -->
+
+						<div class="slide-annotations">
+								<div class="annotation">
+
+									<a href="shop/tanks/rocking-black/" style="top:130px;left:460px">+</a>
+						
+									<div class="annotation-box">
+										
+									</div><!-- annotation-box -->
+								</div><!-- annotation -->
+						</div><!-- annotations -->
 						
 					</li><!-- slide -->
 
@@ -74,7 +77,19 @@ global $tdurl;
 							<h2>Oldschool Snapbacks</h2>
 							<p>Get them for limited time at 10% off.</p>
 							<a href="#">View Product</a>
-						</div>
+						</div><!-- slide caption -->
+
+						<div class="slide-annotations">
+								<div class="annotation">
+
+									<a href="shop/baseball-tees/heat/" style="top:170px;left:510px">+</a>
+						
+									<div class="annotation-box">
+										
+									</div><!-- annotation-box -->
+								</div><!-- annotation -->
+						</div><!-- annotations -->
+
 					</li><!-- slide -->
 				</ul>
 			</div>

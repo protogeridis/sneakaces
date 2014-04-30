@@ -96,10 +96,10 @@ global $tdurl;
 		<script src="<?php echo $tdurl; ?>/vendor/bxslider/jquery.bxslider.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/responsivenav/responsive-nav.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/masonry/masonry.pkgd.min.js"></script>
-		<script src="<?php echo $tdurl; ?>/vendor/collageplus/jquery.collagePlus.min.js"></script>
+		<script src="<?php echo $tdurl; ?>/vendor/autoimgmontage/jquery.montage.min.js"></script>
 		<script>
 
-		
+
 	 
 
 	 jQuery(document).ready(function(){

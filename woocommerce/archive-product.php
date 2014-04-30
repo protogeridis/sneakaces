@@ -71,7 +71,7 @@ get_header('shop'); ?>
 
 					<div class="col-md-2">
 						<div class="woocommerce-result-count">
-							<?php
+							<?php /*
 							$paged    = max( 1, $wp_query->get( 'paged' ) );
 							$per_page = $wp_query->get( 'posts_per_page' );
 							$total    = $wp_query->found_posts;
@@ -85,7 +85,7 @@ get_header('shop'); ?>
 							} else {
 								printf( _x( 'Showing %1$d–%2$d of %3$d results', '%1$d = first, %2$d = last, %3$d = total', 'woocommerce' ), $first, $last, $total );
 							}
-							/* End of Results Count */
+							 End of Results Count */
 							?>
 						</div><!-- result count -->
 					<?php endif; ?>
@@ -127,11 +127,27 @@ if (is_product_category()){
     $image = wp_get_attachment_url( $thumbnail_id ); 
     // print the IMG HTML
     echo '<img src="'.$image.'" alt="" />';
-} ?>
+}else if(is_shop()){ 
+
+ echo '<img src="' . $tdurl . '/images/catalog/catalog_shop.jpg" alt="" />';
+}
+ ?>
 </div>
 
 	<?php if ( have_posts() ) : ?>
 
+	<section class="product-list-controls clearfix">
+		<?php
+				/**
+				 * woocommerce_before_shop_loop hook
+				 *
+				 * @hooked woocommerce_result_count - 20
+				 * @hooked woocommerce_catalog_ordering - 30
+				 */
+				do_action( 'woocommerce_before_shop_loop' );
+			?>
+
+	</section><!-- controls -->
 
 
 	<?php woocommerce_product_loop_start(); ?>

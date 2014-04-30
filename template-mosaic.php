@@ -33,30 +33,23 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	$settings = woo_get_dynamic_values( $settings );
 ?>
 
+<div class="wrapper wrapper-black wrapper-black-header">
+			<div class="container">
+				<div class="row">
+
+					<header class="col-md-12">
+						<?php woo_breadcrumbs(); ?>
+						<h1 class="page-title underbold"><?php the_title(); ?></h1>
+					</header>
+					
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- wrapper black -->
+
+
 <div class="wrapper wrapper-black">
-          
-                        <div id="collage" class="effect-parent">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/1.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/2.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/3.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/4.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/5.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/6.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/7.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/8.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/9.jpg" alt="">
-                            <img src="<?php echo $tdurl ?>/images/mosaic/10.jpg" alt="">
-                        </div><!-- collage -->
-                   <script>
-                   jQuery(window).load(function () {
-    jQuery('#collage').collagePlus({
-        'targetHeight'    :200,
-        'fadeSpeed' : 2000,
-        'effect' : "effect-2",
-        'allowPartialLastRow' : false
-    });
-});</script>
-
-
+<div class="lookbook">
+	<?php the_content(); ?>
+</div><!-- lookbook -->
          </div><!-- wrapper black -->
 <?php get_footer(); ?>
