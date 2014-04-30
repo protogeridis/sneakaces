@@ -24,7 +24,7 @@ global $tdurl;
 			<div class="col-md-12">
 				<ul class="bxslider">
 					<li class="bxslide">
-						<img src="<?php echo $tdurl;?>/images/slider1.jpg" alt="Sales Sneak Aces" />
+						<img src="<?php echo $tdurl;?>/images/slider/slider_1.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
 							<small>New Arrival</small>
 							<h2>Oldschool Snapbacks</h2>
@@ -57,7 +57,7 @@ global $tdurl;
 					</li><!-- slide -->
 
 					<li class="bxslide">
-						<img src="<?php echo $tdurl;?>/images/slider2.jpg" alt="Sales Sneak Aces" />
+						<img src="<?php echo $tdurl;?>/images/slider/slider_2.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
 							<small>Member Exclusive</small>
 							<h2>Get a 20% discount coupon with every order</h2>
@@ -68,7 +68,7 @@ global $tdurl;
 					</li><!-- slide -->
 
 					<li class="bxslide">
-						<img src="<?php echo $tdurl;?>/images/slider3.jpg" alt="Sales Sneak Aces" />
+						<img src="<?php echo $tdurl;?>/images/slider/slider_3.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
 							<small>New Arrival</small>
 							<h2>Oldschool Snapbacks</h2>
