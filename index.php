@@ -139,13 +139,13 @@ global $tdurl;
 					</div>
 					<div class="mosaic-right">
 						<div class="mosaic-upper mosaic-first">
-							<img src="<?php echo $tdurl;?>/images/mosaic1.png" alt="Slider Image">
+							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic1.png" alt="Slider Image">
 						</div>
 						<div class="mosaic-upper">
-							<img src="<?php echo $tdurl;?>/images/mosaic2.png" alt="Slider Image">
+							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic2.png" alt="Slider Image">
 						</div>
 						<div class="mosaic-lower mosaic-first">
-							<img src="<?php echo $tdurl;?>/images/mosaic3.png" alt="Slider Image">
+							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic3.png" alt="Slider Image">
 						</div>
 						<div class="mosaic-lower mosaic-yellow">
 							<p>New Collection</p>

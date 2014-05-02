@@ -68,5 +68,5 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
 
 	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
-<p class="product-categories"><?php echo $product->get_categories(', ','',''); ?></p>
+<p class="product-category"><?php echo $product->get_categories(', ','',''); ?></p>
 </li>

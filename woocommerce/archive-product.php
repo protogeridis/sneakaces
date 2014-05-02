@@ -57,7 +57,7 @@ get_header('shop'); ?>
 						<h1 class="page-title underbold"><?php woocommerce_page_title(); ?></h1>
 					</div>
 					<div class="col-md-6">
-						<?php do_action( 'woocommerce_archive_description' ); ?>
+						<?php /* do_action( 'woocommerce_archive_description' ); */ ?>
 					</div><!-- col md 4 -->
 
 					<?php /* Let's call the results count */ ?>	
@@ -85,7 +85,7 @@ get_header('shop'); ?>
 							} else {
 								printf( _x( 'Showing %1$d–%2$d of %3$d results', '%1$d = first, %2$d = last, %3$d = total', 'woocommerce' ), $first, $last, $total );
 							}
-							 End of Results Count */
+							End of Results Count */
 							?>
 						</div><!-- result count -->
 					<?php endif; ?>
@@ -97,47 +97,51 @@ get_header('shop'); ?>
 
 <?php endif; ?>
 <div class="container container-category">
-<div class="row">
-	<div class="col-md-2">
+	<div class="row">
+		<div class="col-md-2">
 
-		<?php
+			<?php
 
-						$args = array(
-							'menu' => 45,
-							'menu_class' => 'categories-menu categories-menu-vertical'
-							);
+			$args = array(
+				'menu' => 45,
+				'menu_class' => 'categories-menu categories-menu-vertical'
+				);
 
-						wp_nav_menu( $args );
+			wp_nav_menu( $args );
 
-						?>
-		
-	</div><!-- col-md-2 -->
-<div class="col-md-10">
+			?>
 
-<div class="category-image">
-	<?php 
-// verify that this is a product category page
-if (is_product_category()){
-    global $wp_query;
-    // get the query object
-    $cat = $wp_query->get_queried_object();
-    // get the thumbnail id user the term_id
-    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
-    // get the image URL
-    $image = wp_get_attachment_url( $thumbnail_id ); 
-    // print the IMG HTML
-    echo '<img src="'.$image.'" alt="" />';
-}else if(is_shop()){ 
+		</div><!-- col-md-2 -->
+		<div class="col-md-10">
 
- echo '<img src="' . $tdurl . '/images/catalog/catalog_shop.jpg" alt="" />';
-}
- ?>
-</div>
+			<?php 
+			// verify that this is a product category page
+			if (is_product_category()){
+				global $wp_query;
+    			// get the query object
+				$cat = $wp_query->get_queried_object();
+    			// get the thumbnail id user the term_id
+				$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true ); 
+    			// get the image URL
+				$image = wp_get_attachment_url( $thumbnail_id ); 
+    			// print the IMG HTML
+    			if(strlen($image)>0){
+    				echo '<div class="category-image">';
+    				echo '<img src="'.$image.'" alt="" />';
+    				echo '</div><!-- category image -->';
+    			}
+			}else if(is_shop()){ 
+				echo '<div class="category-image">';
+				echo '<img src="' . $tdurl . '/images/catalog/catalog_shop.jpg" alt="" />';
+				echo '</div><!-- category image -->';
+			}
+			?>
 
-	<?php if ( have_posts() ) : ?>
 
-	<section class="product-list-controls clearfix">
-		<?php
+			<?php if ( have_posts() ) : ?>
+
+			<section class="product-list-controls clearfix">
+				<?php
 				/**
 				 * woocommerce_before_shop_loop hook
 				 *
@@ -145,24 +149,24 @@ if (is_product_category()){
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
-			?>
+				?>
 
-	</section><!-- controls -->
+			</section><!-- controls -->
 
 
-	<?php woocommerce_product_loop_start(); ?>
+			<?php woocommerce_product_loop_start(); ?>
 
-	<?php woocommerce_product_subcategories(); ?>
+			<?php woocommerce_product_subcategories(); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
 
-<?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
-<?php woocommerce_product_loop_end(); ?>
+		<?php woocommerce_product_loop_end(); ?>
 
-<?php
+		<?php
 				/**
 				 * woocommerce_after_shop_loop hook
 				 *
@@ -174,13 +178,14 @@ if (is_product_category()){
 			<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
 			<?php woocommerce_get_template( 'loop/no-products-found.php' ); ?>
+			asdasd
 
 		<?php endif; ?>
 
-		</div><!-- col-md-10 -->
-			<!--<div class="col-md-2"><?php /* dynamic_sidebar( 'commerce-controls' ); */ ?> </div> -->
+	</div><!-- col-md-10 -->
+	<!--<div class="col-md-2"><?php /* dynamic_sidebar( 'commerce-controls' ); */ ?> </div> -->
 
-		<?php
+	<?php
 		/**
 		 * woocommerce_after_main_content hook
 		 *
@@ -188,12 +193,12 @@ if (is_product_category()){
 		 */
 		do_action('woocommerce_after_main_content');
 		?>
-	
 
 
-</div><!-- row -->
-	</div><!-- container -->
-	<?php
+
+	</div><!-- row -->
+</div><!-- container -->
+<?php
 		/**
 		 * woocommerce_sidebar hook
 		 *

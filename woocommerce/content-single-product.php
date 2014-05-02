@@ -8,7 +8,7 @@
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
-
+global $product;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
@@ -52,6 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		}*/
 
 		?>
+		<?php echo $product->get_categories( ', ', '<div class="posted_in">' . _n( '&larr; Back to', '', sizeof( get_the_terms( $post->ID, 'product_cat' ) ), 'woocommerce' ) . ' ', '</div>' ); ?>
 
 			<?php
 			/**
@@ -137,7 +138,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 						</li>
 					</ul>
 
-					<div id="sizingTabContent" class="tab-content">
+					<div id="sizingTabContent" class="tab-content size-guide">
 
 						<!--Men Hoodies -->
 						<div class="tab-pane fade active in" id="menhoodies">

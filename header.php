@@ -22,7 +22,7 @@ $tdurl = get_template_directory_uri();
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-	<title><?php woo_title(''); ?></title>
+	<title><?php wp_title('|'); ?></title>
 	<?php woo_meta(); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,greek' rel='stylesheet' type='text/css'>

@@ -68,10 +68,11 @@ global $tdurl;
 				<div class="row footer-bottom">
 					<div class="col-md-4">
 						<ul id="social-links" class="list-unstyled list-inline list-social">
-							<li><a href="http://www.facebook.com/sneakaces" data-social="facebook"><i class="fa fa-2x fa-facebook"></i></a></li>
-							<li><a href="http://www.twitter.com/sneakaces" data-social="twitter"><i class="fa fa-2x fa-twitter"></i></a></li>
-							<li><a href="http://www.pinterest.com/sneakaces" data-social="pinterest"><i class="fa fa-2x fa-instagram"></i></a></li>
-							<li><a href="http://www.instagram.com/sneakaces" data-social="instagram"><i class="fa fa-2x fa-pinterest"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="http://www.facebook.com/sneakaces" data-social="facebook"><i class="fa fa-2x fa-facebook"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="http://www.twitter.com/sneakaces" data-social="twitter"><i class="fa fa-2x fa-twitter"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="http://www.pinterest.com/sneakaces" data-social="pinterest"><i class="fa fa-2x fa-instagram"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="http://www.instagram.com/sneakaces" data-social="instagram"><i class="fa fa-2x fa-pinterest"></i></a></li>
+							<li><a target="_blank" rel="nofollow" href="http://sneakaces.tumblr.com" data-social="tumblr"><i class="fa fa-2x fa-tumblr"></i></a></li>
 						</ul>
 					</div><!-- col-md-4 -->
 					<div class="col-md-4">
@@ -121,6 +122,18 @@ global $tdurl;
 	 });
 
 	 </script>
+
+	 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39879674-1', 'sneakaces.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
 
 
 	 <?php wp_footer(); ?>
