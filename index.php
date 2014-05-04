@@ -26,10 +26,10 @@ global $tdurl;
 					<li class="bxslide">
 						<img src="<?php echo $tdurl;?>/images/slider/slider_1.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
-							<small>New Arrival</small>
-							<h2>Oldschool Snapbacks</h2>
-							<p>Get them for limited time at 10% off.</p>
-							<a href="#">View Product</a>
+							<small>New Collection</small>
+							<h2>Introducing S/S '14</h2>
+							<p>Dope stuff waiting for you.</p>
+							<a href="shop">Shop Now</a>
 
 						
 
@@ -51,10 +51,10 @@ global $tdurl;
 					<li class="bxslide">
 						<img src="<?php echo $tdurl;?>/images/slider/slider_2.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
-							<small>Member Exclusive</small>
-							<h2>Get a 20% discount coupon with every order</h2>
-							<p>Valid until September 31th.</p>
-							<a href="#">View Product</a>
+							<small>New Collection</small>
+							<h2>Shop Women</h2>
+							<p>Sick tees, baseball tees, shirts n' shorts.</p>
+							<a href="#">Shop Now</a>
 						</div><!-- caption -->
 
 						<div class="slide-annotations">
@@ -73,10 +73,10 @@ global $tdurl;
 					<li class="bxslide">
 						<img src="<?php echo $tdurl;?>/images/slider/slider_3.jpg" alt="Sales Sneak Aces" />
 						<div class="slide-caption">
-							<small>New Arrival</small>
-							<h2>Oldschool Snapbacks</h2>
-							<p>Get them for limited time at 10% off.</p>
-							<a href="#">View Product</a>
+							<small>New Collection</small>
+							<h2>Shop Men</h2>
+							<p>Sick tees, baseball tees, shirts n' shorts.</p>
+							<a href="#">Shop Now</a>
 						</div><!-- slide caption -->
 
 						<div class="slide-annotations">
@@ -100,13 +100,30 @@ global $tdurl;
 
 </div><!-- wrapper-slider -->
 
+<div class="wrapper wrapper-info wrapper-yellow">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<p><strong><?php _e( '14-day', 'sneakaces' ) ?></strong> <?php _e( 'Return Policy', 'sneakaces' ) ?></p>
+			</div><!-- col md 4 -->
+			<div class="col-md-4">
+				<p><strong><?php _e( 'Free Shipping', 'sneakaces' ) ?></strong> <?php _e( 'for orders above &euro;50', 'sneakaces' ) ?></p>
+			</div><!-- col md 4 -->
+			<div class="col-md-5">
+
+				<p><?php _e( '24/7 Customer Support &amp; Phone Orders', 'sneakaces' ) ?> <strong>+30 (210) 6953564</strong></p>
+			</div><!-- col md 4 -->
+		</div><!-- row -->
+	</div>
+</div><!-- wrapper info -->
+
 <div class="container">
 	<div class="front-text">
 		<div class="row">
 			<div class="col-md-8">
 				<small class="underbold">Sneakaces™</small>
 				<h1 class="front-big">For the Abnormal and the Unusual</h1>
-				<p class="front-small">Sneak Aces designs and manufactures high quality streetwear, targeted at the shouters, the unordinary. We support and elevate the Street Culture that was born through action sports, and we are a family of the like-minded.</p>
+				<p class="front-small"><?php _e( 'Sneak Aces designs and manufactures high quality streetwear, targeted at the shouters, the unordinary. We support and elevate the Street Culture that was born through action sports, and we are a family of the like-minded. Since the end &trade;', 'sneakaces' ) ?></p>
 			</div><!-- col-md-8 -->
 
 			<div class="col-md-4">
@@ -115,8 +132,8 @@ global $tdurl;
 				<div class="yellow-block">
 					<div id="mc_embed_signup">
 						<span class="underbold">Newsletter</span>
-						<h3>Want to receive cool Updates?</h3>
-						<p>New arrivals, offers, coupons and news.</p>
+						<h3><?php _e( 'Want to receive sick Updates?', 'sneakaces' ) ?></h3>
+						<p><?php _e( 'Do you wish to receive all the latest news, sick deals and new product updates? Join our newsletter and we will keep you posted.', 'sneakaces' ) ?></p>
 						<form action="http://sneakaces.us6.list-manage.com/subscribe/post?u=77b17aa87ce15751633681191&amp;id=cbcda0a63f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
@@ -139,7 +156,7 @@ global $tdurl;
 					</div>
 					<div class="mosaic-right">
 						<div class="mosaic-upper mosaic-first">
-							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic1.png" alt="Slider Image">
+							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic3.gif" alt="Slider Image">
 						</div>
 						<div class="mosaic-upper">
 							<img src="<?php echo $tdurl;?>/images/mosaic/mosaic2.png" alt="Slider Image">

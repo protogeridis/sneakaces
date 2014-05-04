@@ -52,7 +52,7 @@ global $tdurl;
 							<div id="mc_embed_signup">
 								<form action="http://sneakaces.us6.list-manage.com/subscribe/post?u=77b17aa87ce15751633681191&amp;id=cbcda0a63f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 									<h3>Subscribe to our mailing list</h3>
-									<p>Do you wish to receive all the latest news, sick deals and new product updates? Join our newsletter and we'll keep you posted.</p>
+									<p><?php _e( 'Do you wish to receive all the latest news, sick deals and new product updates? Join our newsletter and we will keep you posted.', 'sneakaces' ) ?></p>
 									<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 									<input type="submit" value="I'm in" name="subscribe" id="mc-embedded-subscribe" class="button">
 								</form>
@@ -80,7 +80,13 @@ global $tdurl;
 					</div><!-- col-md-4 -->
 
 					<div class="col-md-4">
-						<span class="telephone-big">+30 (210) 67 53 564</span>	
+						<ul class="credit-cards">
+							<li><img src="<?php echo $tdurl; ?>/images/paypal.png" alt="Paypal"></li>
+							<li><img src="<?php echo $tdurl; ?>/images/credit-cards/visa.png" alt="Visa"></li>
+							<li><img src="<?php echo $tdurl; ?>/images/credit-cards/mastercard.png" alt="Mastercard"></li>
+							<li><img src="<?php echo $tdurl; ?>/images/credit-cards/maestro.png" alt="Maesto"></li>
+							<li><img src="<?php echo $tdurl; ?>/images/credit-cards/diners.png" alt="Diners"></li>
+						</ul>	
 					</div><!-- col md 4 -->
 				
 				</div><!-- row -->
@@ -97,31 +103,8 @@ global $tdurl;
 		<script src="<?php echo $tdurl; ?>/vendor/bxslider/jquery.bxslider.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/responsivenav/responsive-nav.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/masonry/masonry.pkgd.min.js"></script>
-		<script src="<?php echo $tdurl; ?>/vendor/autoimgmontage/jquery.montage.min.js"></script>
-		<script>
-
-
-	 
-
-	 jQuery(document).ready(function(){
-
-	 	var navigation = responsiveNav(".nav-collapse", {
-        customToggle: "#toggle"
-      });
-
-
-	 	//bxslider
-	  jQuery('.bxslider').bxSlider({
-	 	   mode: 'fade',
-	 	   pager: true,
-	 	   controls: true,
-	 	   auto:true,
-	 	   easing:'swing',
-	 	   pause:10000
-	      });
-	 });
-
-	 </script>
+		<script src="<?php echo $tdurl; ?>/vendor/main.js"></script>
+		
 
 	 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
