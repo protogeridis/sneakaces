@@ -43,6 +43,7 @@ foreach ( $includes as $i ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
+
 // Note for %payment-code%
 // CashonDeliver = 'cod'
 // PayPal = 'paypal'

@@ -578,7 +578,6 @@ margin: 0 auto;
 
 
 /* Cart */
-
 .header .cart a{
 	padding:0;
 }
@@ -669,6 +668,20 @@ table.cart td{
 .product-price ins {
 	text-decoration: none;
 	font-weight: bold;
+}
+
+.cart-collaterals {
+display: none;
+}
+.update-cart-button{
+	display: none!important;
+}
+.actions .amount {
+margin-right: 50px;
+}
+table.cart td.actions .coupon .input-text, table.cart td.actions .coupon .button {
+height: 39px;
+padding: 0 20px;
 }
 
 

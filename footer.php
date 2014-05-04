@@ -99,7 +99,13 @@ global $tdurl;
 		</div><!-- wrapper footer -->
 
 
-		<script src="<?php echo $tdurl; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+		
+
+
+	 <?php wp_footer(); ?>
+	 <?php woo_foot(); ?>
+
+	 	<script src="<?php echo $tdurl; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/bxslider/jquery.bxslider.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/responsivenav/responsive-nav.min.js"></script>
 		<script src="<?php echo $tdurl; ?>/vendor/masonry/masonry.pkgd.min.js"></script>
@@ -117,10 +123,6 @@ global $tdurl;
   ga('send', 'pageview');
 
 </script>
-
-
-	 <?php wp_footer(); ?>
-	 <?php woo_foot(); ?>
 
 	</body>
 	</html>
