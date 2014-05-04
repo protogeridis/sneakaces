@@ -54,7 +54,7 @@ global $tdurl;
 							<small>New Collection</small>
 							<h2>Shop Women</h2>
 							<p>Sick tees, baseball tees, shirts n' shorts.</p>
-							<a href="#">Shop Now</a>
+							<a href="category/women/">Shop Now</a>
 						</div><!-- caption -->
 
 						<div class="slide-annotations">
@@ -76,7 +76,7 @@ global $tdurl;
 							<small>New Collection</small>
 							<h2>Shop Men</h2>
 							<p>Sick tees, baseball tees, shirts n' shorts.</p>
-							<a href="#">Shop Now</a>
+							<a href="category/men/">Shop Now</a>
 						</div><!-- slide caption -->
 
 						<div class="slide-annotations">

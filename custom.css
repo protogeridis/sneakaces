@@ -722,6 +722,9 @@ width: auto;
 .checkout input[type="checkbox"]::before{
 	display: none;
 }
+input#createaccount {
+top: 0;
+}
 /* Search Form */
 
 .search input[type="search"] {

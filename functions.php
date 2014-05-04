@@ -43,6 +43,33 @@ foreach ( $includes as $i ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
+// Note for %payment-code%
+// CashonDeliver = 'cod'
+// PayPal = 'paypal'
+// Basic Payment = 'bacs'
+// Cheque payment = 'cheque'
+// Mijireh Gatway = 'mijireh_checkout'
+ 
+// Note for %countrycode%
+// India = 'IN'
+// Norway = 'NO' etc...
+ 
+function payment_gateway_disable_country( $available_gateways ) {
+global $woocommerce;
+if ( isset( $available_gateways['cod'] ) && $woocommerce->customer->get_country() <> 'GR' ) {
+    unset(  $available_gateways['cod'] );
+}
+return $available_gateways;
+}
+add_filter( 'woocommerce_available_payment_gateways', 'payment_gateway_disable_country' );
+
+
+function home_page_menu_args( $args ) {
+$args['show_home'] = true;
+return $args;
+}
+add_filter( 'wp_page_menu_args', 'home_page_menu_args' );
+
 /**
  * Optimize WooCommerce Scripts
  * Remove WooCommerce Generator tag, styles, and scripts from non WooCommerce pages.
