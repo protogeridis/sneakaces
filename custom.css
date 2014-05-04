@@ -50,6 +50,9 @@ background:none;
 input[type="checkbox"]::before {
 display: none;
 }
+#ship-to-different-address-checkbox {
+top: -20px;
+}
 
 #customer_login .col-1 h2:before {
 display: none;
@@ -584,7 +587,6 @@ margin: 0 auto;
 	float:right;
 }
 .header .cart .total{
-	display: none;
 }
 .header .search input {
 	margin: 0;
@@ -597,13 +599,14 @@ margin: 0 auto;
 .header .amount, .header .contents{
 	font-weight:normal;
 }
-.header .amount {
+.header span.amount {
 	background: #ffcc00;
 	border-radius: 5px;
 	display: inline-block;
 	padding: 0 8px;
 	text-align: center;
 	margin-right: 0;
+	margin-left: 10px;
 	line-height: 20px;
 }
 .header .login-button{
@@ -613,6 +616,17 @@ margin: 0 auto;
 .header .login-button a{
 	padding:0;
 }
+ /*div.menu-user-menu-container ul.menu{
+ 	background:black;
+ 	padding:10px 20px;
+ 	color:white;
+ }
+ .header .login-button a:hover{
+ }
+.header .login-button a:hover + div.menu-user-menu-container ul.menu, div.menu-user-menu-container ul.menu:hover {
+	display:block;
+	visibility: visible;
+}*/
 .mobile-nav{
 	display:none;
 	position: absolute;
@@ -660,6 +674,12 @@ table.cart td{
 
 /* Checkout Page */
 
+.checkout #order_review .form-row.place-order .button {
+font-size: inherit;
+margin-bottom: .618em;
+float: left;
+width: auto;
+}
 .checkout #order_review #payment ul {
 	border:none;
 }
@@ -709,6 +729,7 @@ table.cart td{
 	border: none;
 	border-radius: 5px;
 	box-shadow: none;
+	width: 200px;
 }
 .header #searchform {
 	margin: 0;
