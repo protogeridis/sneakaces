@@ -17,7 +17,12 @@ get_header();
 global $woo_options;
 global $tdurl; 
 ?>
-<div class="wrapper wrapper-black">
+<!-- Preloader -->
+	<div id="preloader">
+		<div id="status" class="pulse">&nbsp;</div>
+	</div>
+
+<div class="wrapper wrapper-black wrapper-black-slider">
 	<!-- slider -->
 	<div class="container">
 		<div class="row">
@@ -103,26 +108,26 @@ global $tdurl;
 <div class="wrapper wrapper-info wrapper-yellow">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<p><strong><?php _e( '14-day', 'sneakaces' ) ?></strong> <?php _e( 'Return Policy', 'sneakaces' ) ?></p>
+			<div class="col-md-4">
+				<p class="info-left"><i class="fa fa-mail-reply"></i><strong><?php _e( '14-day', 'sneakaces' ) ?></strong> <?php _e( 'Return Policy', 'sneakaces' ) ?></p>
 			</div><!-- col md 4 -->
 			<div class="col-md-4">
-				<p><strong><?php _e( 'Free Shipping', 'sneakaces' ) ?></strong> <?php _e( 'for orders above &euro;50', 'sneakaces' ) ?></p>
+				<p class="info-center"><i class="fa fa-truck"></i><strong><?php _e( 'Free Shipping', 'sneakaces' ) ?></strong> <?php _e( 'for orders above &euro;100', 'sneakaces' ) ?></p>
 			</div><!-- col md 4 -->
-			<div class="col-md-5">
-
-				<p><?php _e( '24/7 Customer Support &amp; Phone Orders', 'sneakaces' ) ?> <strong>+30 (210) 6953564</strong></p>
+			<div class="col-md-4">
+				<p class="info-right"><i class="fa fa-phone"></i><?php _e( '24/7 Customer Support', 'sneakaces' ) ?> <strong>+30 (210) 6753564</strong></p>
 			</div><!-- col md 4 -->
 		</div><!-- row -->
 	</div>
 </div><!-- wrapper info -->
+
 
 <div class="container">
 	<div class="front-text">
 		<div class="row">
 			<div class="col-md-8">
 				<small class="underbold">Sneakaces™</small>
-				<h1 class="front-big">For the Abnormal and the Unusual</h1>
+				<h1 class="front-big">Since the End</h1>
 				<p class="front-small"><?php _e( 'Sneak Aces designs and manufactures high quality streetwear, targeted at the shouters, the unordinary. We support and elevate the Street Culture that was born through action sports, and we are a family of the like-minded. Since the end &trade;', 'sneakaces' ) ?></p>
 			</div><!-- col-md-8 -->
 
@@ -274,4 +279,6 @@ global $tdurl;
 		</div><!-- /#content -->
 		
 	</div><!-- container -->
+
+
 	<?php get_footer(); ?>

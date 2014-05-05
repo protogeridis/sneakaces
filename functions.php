@@ -43,6 +43,7 @@ foreach ( $includes as $i ) {
 /* You can add custom functions below */
 /*-----------------------------------------------------------------------------------*/
 
+remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
 // Note for %payment-code%
 // CashonDeliver = 'cod'
@@ -64,6 +65,13 @@ return $available_gateways;
 }
 add_filter( 'woocommerce_available_payment_gateways', 'payment_gateway_disable_country' );
 
+
+function terms_agree_text(){
+	echo '<p class="terms">';
+	_e('By clicking the button below, you agree to our terms of use.','sneakaces');
+	echo '</p>';
+}
+add_filter( 'woocommerce_review_order_before_submit', 'terms_agree_text' );
 
 function home_page_menu_args( $args ) {
 $args['show_home'] = true;

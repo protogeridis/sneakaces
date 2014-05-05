@@ -66,7 +66,7 @@ get_header('shop'); ?>
 				</div><!-- col-md-2 -->
 				<div class="col-md-10">
 
-
+					<?php echo '<div class="sku">' . $product->sku . '</div>'; ?>
 					<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
 
 				<?php endwhile; // end of the loop. ?>

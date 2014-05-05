@@ -73,10 +73,37 @@ $tdurl = get_template_directory_uri();
 							<a href="<?php echo get_site_url(); ?>" class="logo header-logo"></a>
 						</div><!-- header branding -->
 					</div><!-- col md 3 -->
-					<div class="col-md-6 forcestatic">
+					<div class="col-md-9 forcestatic">
 						
 						
-							<?php woo_nav_before(); ?>
+						<div class="row">
+							<div class="col-md-6">
+								
+							</div><!-- col-md-6 -->
+							<div class="col-md-6">
+								
+										<?php global $current_user;get_currentuserinfo(); ?> 
+										<?php
+										if ( class_exists( 'woocommerce' ) ) {
+											echo '<ul class="nav wc-nav">';
+											echo '<li class="cart"><a href="'. get_site_url() .'/cart/" class="amount"><span class="total">'.$woocommerce->cart->cart_contents_count.' '. (($woocommerce->cart->cart_contents_count==1) ? 'Item' : 'Items') .'</span>'.$woocommerce->cart->get_cart_total().'</a></li>';
+											echo '<li class="login-button"><a href="' . get_site_url() . '/my-account/">'. (is_user_logged_in() ? 'Hello, '.$current_user->user_firstname : 'Login/Register') .'</a>';
+											echo '</li>';
+
+					
+											/*echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';*/
+											
+											
+											echo '</ul>';
+										}
+										?>
+
+							</div><!-- col-md-3 -->
+
+						</div><!-- row -->
+						<div class="row">
+							<div class="col-md-8 forcestatic">
+								<?php woo_nav_before(); ?>
 
 									<nav id="navigation" role="navigation">
 
@@ -95,37 +122,16 @@ $tdurl = get_template_directory_uri();
 										</nav><!-- /#navigation -->
 
 										<?php woo_nav_after(); ?>
+							</div><!-- col md 6 -->
+							<div class="col-md-4">
+								<?php echo get_search_form(); ?>
+							</div><!-- col md 3 -->
+						</div><!-- row -->
+						
+									
+							
 
 
-									</div><!-- col-md-6 -->
-
-									<div class="col-md-3">
-										<nav role="navigation">
-										<?php if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'top-menu' ) ) { ?>
-										<?php wp_nav_menu( array( 'depth' => 6, 'sort_column' => 'menu_order', 'container' => 'ul', 'menu_id' => 'top-nav', 'menu_class' => 'nav fl', 'theme_location' => 'top-menu' ) ); ?>
-										<?php } ?>
-
-
-										<?php global $current_user;get_currentuserinfo(); ?> 
-										<?php
-										if ( class_exists( 'woocommerce' ) ) {
-											echo '<ul class="nav wc-nav">';
-											echo '<li class="cart"><a href="'. get_site_url() .'/cart/" class="amount"><span class="total">'.$woocommerce->cart->cart_contents_count.' '. (($woocommerce->cart->cart_contents_count==1) ? 'Item' : 'Items') .'</span>'.$woocommerce->cart->get_cart_total().'</a></li>';
-											echo '<li class="login-button"><a href="' . get_site_url() . '/my-account/">'. (is_user_logged_in() ? 'Hello, '.$current_user->user_firstname : 'Login/Register') .'</a>';
-											echo '</li>';
-
-					
-											/*echo '<li class="checkout"><a href="'.esc_url($woocommerce->cart->get_checkout_url()).'">'.__('Checkout','woothemes').'</a></li>';*/
-											echo get_search_form();
-											
-											echo '</ul>';
-										}
-										?>
-									</nav><!-- Woocommerce navigation -->
-
-
-										
-									</div><!-- col-md-4 -->
 									
 									
 							

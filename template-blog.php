@@ -65,8 +65,7 @@ echo $count_posts->publish; ?></h4>
                 
          
         
-        <section id="blog" class="js-masonry"
-  data-masonry-options='{ "itemSelector": ".blog-post", "columnWidth": ".grid-size" }'>       
+        <section id="blog" class="">       
 		
 		<?php woo_loop_before(); ?>
 
